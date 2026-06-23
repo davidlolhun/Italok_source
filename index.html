@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ital Alkohol Kalkulátor</title>
+    <style>
+        * { box-sizing: border-box; font-family: Arial, sans-serif; }
+        body {
+            margin: 0; min-height: 100vh; background: linear-gradient(135deg, #151515, #252525);
+            color: white; display: flex; justify-content: center; padding: 30px 15px;
+        }
+        .container { width: 100%; max-width: 1050px; }
+        h1 { text-align: center; margin-bottom: 10px; }
+        .subtitle { text-align: center; color: #cfcfcf; margin-bottom: 28px; }
+        .card, .result {
+            background: #1f1f1f; border-radius: 18px; padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.35); margin-bottom: 20px;
+        }
+        .top-controls { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 16px; margin-bottom: 18px; }
+        @media (max-width: 820px) { .top-controls { grid-template-columns: 1fr; } }
+        label { display: block; margin-bottom: 8px; color: #ddd; }
+        input {
+            width: 100%; padding: 13px; border-radius: 12px; border: none;
+            font-size: 16px; outline: none;
+        }
+        .search-wrap { position: relative; }
+        .clear-search {
+            position: absolute; right: 8px; bottom: 6px; height: 34px; min-width: 34px;
+            border: none; border-radius: 10px; background: #444; color: white; cursor: pointer;
+            font-weight: bold;
+        }
+        .clear-search:hover { background: #555; }
+        .options { display: flex; gap: 10px; }
+        .option-btn, .small-btn {
+            padding: 12px; border-radius: 12px; border: 2px solid #444;
+            background: #2d2d2d; color: white; cursor: pointer; font-weight: bold;
+        }
+        .option-btn { flex: 1; }
+        .option-btn.active { border-color: #60a5fa; background: #123456; }
+        .counter { display: grid; grid-template-columns: 48px 1fr 48px; gap: 8px; }
+        .counter button { font-size: 22px; }
+        .drink-table { width: 100%; border-collapse: separate; border-spacing: 0 10px; }
+        .drink-table th { text-align: left; color: #bdbdbd; font-size: 13px; padding: 0 10px 4px; }
+        .drink-row { background: #2b2b2b; transition: 0.15s; }
+        .drink-row:hover { background: #333; transform: scale(1.005); }
+        .drink-row td { padding: 12px 10px; border-top: 2px solid #3a3a3a; border-bottom: 2px solid #3a3a3a; }
+        .drink-row td:first-child { border-left: 2px solid #3a3a3a; border-radius: 12px 0 0 12px; }
+        .drink-row td:last-child { border-right: 2px solid #3a3a3a; border-radius: 0 12px 12px 0; }
+        .drink-row.start-selected { background: #153d24; }
+        .drink-row.target-selected { background: #461b1b; }
+        .drink-row.start-selected.target-selected {
+            background: linear-gradient(90deg, #153d24 0%, #153d24 50%, #461b1b 50%, #461b1b 100%);
+        }
+        .drink-name { font-weight: bold; font-size: 16px; color: #fff; }
+        .drink-category { color: #a9a9a9; font-size: 13px; margin-left: 8px; white-space: nowrap; }
+        .drink-info { color: #cfcfcf; font-size: 14px; margin-top: 4px; }
+        .select-btn {
+            width: 42px; height: 38px; border-radius: 999px; border: 2px solid #555;
+            background: #242424; color: white; cursor: pointer; font-weight: bold;
+        }
+        .start-btn.active { background: #36d66b; color: #071b0d; border-color: #36d66b; }
+        .target-btn.active { background: #ff4d4d; color: #230000; border-color: #ff4d4d; }
+        .tag { display: inline-block; margin-top: 7px; padding: 3px 8px; border-radius: 999px; font-size: 12px; font-weight: bold; }
+        .tag.start { background: #36d66b; color: #071b0d; }
+        .tag.target { background: #ff4d4d; color: #230000; }
+        .result { background: #111; border: 2px solid #444; text-align: center; }
+        .big-result { font-size: 34px; font-weight: bold; color: #ffd84d; margin: 15px 0; }
+        .warning { color: #ff8888; margin-top: 10px; min-height: 22px; }
+        .reset-btn { width: 100%; padding: 14px; border: none; border-radius: 12px; background: #444; color: white; cursor: pointer; font-weight: bold; }
+        .reset-btn:hover { background: #555; }
+        .muted { color: #aaa; font-size: 14px; }
+        .hidden { display: none; }
+        @media (max-width: 620px) {
+            .drink-category { display: block; margin-left: 0; margin-top: 4px; }
+            .big-result { font-size: 26px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ital Alkohol Kalkulátor</h1>
+        <p class="subtitle">Egy listából jelöld zölddel a kiindulási italt és pirossal a célitalt.</p>
+
+        <div class="card">
+            <div class="top-controls">
+                <div class="search-wrap">
+                    <label>Keresés italra vagy kategóriára:</label>
+                    <input id="searchInput" type="text" placeholder="pl. sör, likőr, Royal, tequila...">
+                    <button class="clear-search" id="clearSearchBtn" title="Keresés törlése">×</button>
+                </div>
+
+                <div>
+                    <label id="startCountLabel">Hány db kiszerelést innál?</label>
+                    <div class="counter">
+                        <button class="small-btn" id="minusBtn">−</button>
+                        <input id="startCount" type="number" min="0.5" step="0.5" value="1">
+                        <button class="small-btn" id="plusBtn">+</button>
+                    </div>
+                    <div id="startError" class="warning"></div>
+                </div>
+
+                <div>
+                    <label>Kiindulási mennyiség:</label>
+                    <div class="options">
+                        <button class="option-btn active" id="startStandardBtn">1. Standard</button>
+                        <button class="option-btn" id="startFelesBtn">2. Feles</button>
+                    </div>
+                    <label style="margin-top: 12px;">Céladag:</label>
+                    <div class="options">
+                        <button class="option-btn active" id="targetStandardBtn">1. Standard</button>
+                        <button class="option-btn" id="targetFelesBtn">2. Feles</button>
+                    </div>
+                </div>
+            </div>
+
+            <table class="drink-table">
+                <thead>
+                    <tr>
+                        <th>Ital</th>
+                        <th>Kiindulási</th>
+                        <th>Cél</th>
+                    </tr>
+                </thead>
+                <tbody id="drinkTable"></tbody>
+            </table>
+
+            <div id="noResults" class="muted hidden">Nincs találat. Töröld a keresést vagy írj be mást.</div>
+        </div>
+
+        <div class="result">
+            <h2>Eredmény</h2>
+            <div id="summary">Válassz kiindulási és célitalt.</div>
+            <div class="big-result" id="resultText">-</div>
+            <div id="details"></div>
+        </div>
+
+        <button class="reset-btn" onclick="resetCalculator()">Új számítás</button>
+        <p class="muted">Az italokat az <b>italok.json</b> fájlban tudod bővíteni.</p>
+    </div>
+
+    <script>
+        const FELES_ML = 50;
+
+        const fallbackDrinks = [
+            { name: "Soproni Meggy", category: "sör", volume: 500, percent: 4 },
+            { name: "Sommersby Cider", category: "cider", volume: 500, percent: 4.5 },
+            { name: "Royal Meggy", category: "likőr", volume: 200, percent: 28 },
+            { name: "Royal Original", category: "rövidital", volume: 500, percent: 37.5 },
+            { name: "Sierra Tequila Blanco (átlátszó)", category: "tequila", volume: 700, percent: 38 },
+            { name: "Sierra Tequila Reposado (sárga)", category: "tequila", volume: 700, percent: 38 },
+            { name: "Martell Konyak", category: "konyak", volume: 700, percent: 40 },
+            { name: "Jägermeister", category: "likőr", volume: 700, percent: 35 },
+            { name: "Ballantines Whisky", category: "whisky", volume: 700, percent: 40 }
+        ];
+
+        let drinks = [];
+        let startDrink = null;
+        let targetDrink = null;
+        let startMode = "standard";
+        let targetMode = "standard";
+        let searchText = "";
+
+        async function loadDrinks() {
+            try {
+                const response = await fetch("italok.json?cache=" + Date.now());
+                if (!response.ok) throw new Error("Nem sikerült betölteni az italok.json fájlt.");
+                drinks = await response.json();
+            } catch (error) {
+                drinks = fallbackDrinks;
+                console.warn("Fallback ital lista betöltve:", error);
+            }
+
+            renderDrinkTable();
+            calculate();
+        }
+
+        function normalize(text) {
+            return String(text || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        }
+
+        function getFilteredDrinks() {
+            const q = normalize(searchText.trim());
+            if (!q) return drinks;
+
+            return drinks.filter(drink => {
+                const haystack = normalize(`${drink.name} ${drink.category} ${drink.volume}ml ${drink.percent}%`);
+                return haystack.includes(q);
+            });
+        }
+
+        function pureAlcoholMl(volumeMl, percent) {
+            return volumeMl * percent / 100;
+        }
+
+        function getUnitVolume(drink, mode) {
+            if (!drink) return 0;
+            return mode === "standard" ? drink.volume : FELES_ML;
+        }
+
+        function getUnitName(mode) {
+            return mode === "standard" ? "kiszerelés" : "feles";
+        }
+
+        function renderDrinkTable() {
+            const table = document.getElementById("drinkTable");
+            const noResults = document.getElementById("noResults");
+            const filtered = getFilteredDrinks();
+
+            table.innerHTML = "";
+            noResults.classList.toggle("hidden", filtered.length !== 0);
+
+            filtered.forEach((drink) => {
+                const row = document.createElement("tr");
+                row.className = "drink-row";
+
+                if (startDrink && drink.name === startDrink.name) row.classList.add("start-selected");
+                if (targetDrink && drink.name === targetDrink.name) row.classList.add("target-selected");
+
+                let tags = "";
+                if (startDrink && drink.name === startDrink.name) tags += `<span class="tag start">Kiindulási ital</span>`;
+                if (targetDrink && drink.name === targetDrink.name) tags += ` <span class="tag target">Célital</span>`;
+
+                row.innerHTML = `
+                    <td>
+                        <div class="drink-name">
+                            ${drink.name}
+                            <span class="drink-category">${drink.category}</span>
+                        </div>
+                        <div class="drink-info">${drink.volume} ml - ${drink.percent}%</div>
+                        ${tags}
+                    </td>
+                    <td><button class="select-btn start-btn ${startDrink && drink.name === startDrink.name ? "active" : ""}">Z</button></td>
+                    <td><button class="select-btn target-btn ${targetDrink && drink.name === targetDrink.name ? "active" : ""}">P</button></td>
+                `;
+
+                row.querySelector(".start-btn").onclick = () => {
+                    startDrink = drink;
+                    renderDrinkTable();
+                    calculate();
+                };
+
+                row.querySelector(".target-btn").onclick = () => {
+                    targetDrink = drink;
+                    renderDrinkTable();
+                    calculate();
+                };
+
+                table.appendChild(row);
+            });
+        }
+
+        function setMode(type, mode) {
+            if (type === "start") {
+                startMode = mode;
+                document.getElementById("startStandardBtn").classList.toggle("active", mode === "standard");
+                document.getElementById("startFelesBtn").classList.toggle("active", mode === "feles");
+                document.getElementById("startCountLabel").innerText =
+                    mode === "standard" ? "Hány db kiszerelést innál?" : "Hány db felest innál?";
+            } else {
+                targetMode = mode;
+                document.getElementById("targetStandardBtn").classList.toggle("active", mode === "standard");
+                document.getElementById("targetFelesBtn").classList.toggle("active", mode === "feles");
+            }
+
+            calculate();
+        }
+
+        function changeCount(amount) {
+            const input = document.getElementById("startCount");
+            let value = Number(input.value.replace?.(",", ".") || input.value) || 0;
+            value += amount;
+            if (value < 0.5) value = 0.5;
+            input.value = Number.isInteger(value) ? value : value.toFixed(1);
+            calculate();
+        }
+
+        function calculate() {
+            const countInput = document.getElementById("startCount");
+            const count = Number(String(countInput.value).replace(",", "."));
+            const error = document.getElementById("startError");
+            const summary = document.getElementById("summary");
+            const resultText = document.getElementById("resultText");
+            const details = document.getElementById("details");
+
+            error.innerText = "";
+
+            if (!startDrink || !targetDrink) {
+                summary.innerText = "Válassz kiindulási és célitalt.";
+                resultText.innerText = "-";
+                details.innerText = "";
+                return;
+            }
+
+            if (!count || count <= 0) {
+                error.innerText = "Adj meg pozitív darabszámot.";
+                summary.innerText = "Hibás mennyiség.";
+                resultText.innerText = "-";
+                details.innerText = "";
+                return;
+            }
+
+            const startUnitMl = getUnitVolume(startDrink, startMode);
+            const targetUnitMl = getUnitVolume(targetDrink, targetMode);
+            const startTotalMl = startUnitMl * count;
+            const startAlcohol = pureAlcoholMl(startTotalMl, startDrink.percent);
+            const targetAlcohol = pureAlcoholMl(targetUnitMl, targetDrink.percent);
+            const equivalent = startAlcohol / targetAlcohol;
+
+            summary.innerText = `${count} db ${getUnitName(startMode)} ${startDrink.name} alkoholban ennyi:`;
+            resultText.innerText = `${equivalent.toFixed(2)} db ${getUnitName(targetMode)} ${targetDrink.name}`;
+            details.innerHTML = `
+                Kiindulási alkohol: <b>${startAlcohol.toFixed(2)} ml</b> tiszta alkohol<br>
+                Egy céladag alkohol: <b>${targetAlcohol.toFixed(2)} ml</b> tiszta alkohol
+            `;
+        }
+
+        function resetCalculator() {
+            startDrink = null;
+            targetDrink = null;
+            startMode = "standard";
+            targetMode = "standard";
+            searchText = "";
+            document.getElementById("searchInput").value = "";
+            document.getElementById("startCount").value = 1;
+            setMode("start", "standard");
+            setMode("target", "standard");
+            renderDrinkTable();
+            calculate();
+        }
+
+        document.getElementById("searchInput").oninput = (event) => {
+            searchText = event.target.value;
+            renderDrinkTable();
+        };
+
+        document.getElementById("clearSearchBtn").onclick = () => {
+            searchText = "";
+            document.getElementById("searchInput").value = "";
+            renderDrinkTable();
+            document.getElementById("searchInput").focus();
+        };
+
+        document.getElementById("startStandardBtn").onclick = () => setMode("start", "standard");
+        document.getElementById("startFelesBtn").onclick = () => setMode("start", "feles");
+        document.getElementById("targetStandardBtn").onclick = () => setMode("target", "standard");
+        document.getElementById("targetFelesBtn").onclick = () => setMode("target", "feles");
+        document.getElementById("minusBtn").onclick = () => changeCount(-0.5);
+        document.getElementById("plusBtn").onclick = () => changeCount(0.5);
+        document.getElementById("startCount").oninput = calculate;
+
+        loadDrinks();
+    </script>
+</body>
+</html>
