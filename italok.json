@@ -7,5 +7,6 @@
   { "name": "Sierra Tequila Reposado (sárga)", "category": "tequila", "volume": 700, "percent": 38 },
   { "name": "Martell Konyak", "category": "konyak", "volume": 700, "percent": 40 },
   { "name": "Jägermeister", "category": "likőr", "volume": 700, "percent": 35 },
+  { "name": "SZIAAA", "category": "likőr", "volume": 700, "percent": 35 },
   { "name": "Ballantines Whisky", "category": "whisky", "volume": 700, "percent": 40 }
 ]
