@@ -6,7 +6,7 @@
   { "name": "Royal Original", "category": "rövidital", "volume": 500, "percent": 37.5 },
   { "name": "Sierra Tequila Blanco (átlátszó)", "category": "tequila", "volume": 700, "percent": 38 },
   { "name": "Sierra Tequila Reposado (sárga)", "category": "tequila", "volume": 700, "percent": 38 },
-  { "name": "Martell Konyak", "category": "konyak", "volume": 700, "percent": 40 },
+  { "name": "Martell", "category": "konyak", "volume": 700, "percent": 40 },
   { "name": "Jägermeister", "category": "likőr", "volume": 700, "percent": 35 },
   { "name": "Ballantines Whisky", "category": "whisky", "volume": 700, "percent": 40 }
 ]
