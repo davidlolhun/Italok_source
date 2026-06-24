@@ -2,6 +2,7 @@
   { "name": "Soproni Meggy", "category": "sör", "volume": 500, "percent": 4 },
   { "name": "Sommersby Cider", "category": "cider", "volume": 500, "percent": 4.5 },
   { "name": "Royal Meggy", "category": "likőr", "volume": 200, "percent": 28 },
+  { "name": "Royal Málna", "category": "likőr", "volume": 500, "percent": 26 },
   { "name": "Royal Original", "category": "rövidital", "volume": 500, "percent": 37.5 },
   { "name": "Sierra Tequila Blanco (átlátszó)", "category": "tequila", "volume": 700, "percent": 38 },
   { "name": "Sierra Tequila Reposado (sárga)", "category": "tequila", "volume": 700, "percent": 38 },
