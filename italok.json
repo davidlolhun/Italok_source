@@ -1,13 +1,1549 @@
-[
-  { "name": "Soproni Meggy", "category": "sör", "volume": 500, "percent": 4 },
-  { "name": "Sommersby Cider", "category": "cider", "volume": 500, "percent": 4.5 },
-  { "name": "Royal Meggy", "category": "likőr", "volume": 200, "percent": 28 },
-  { "name": "Royal Málna", "category": "likőr", "volume": 500, "percent": 26 },
-  { "name": "Royal Original", "category": "rövidital", "volume": 500, "percent": 37.5 },
-  { "name": "Sierra Tequila Blanco (átlátszó)", "category": "tequila", "volume": 700, "percent": 38 },
-  { "name": "Sierra Tequila Reposado (sárga)", "category": "tequila", "volume": 700, "percent": 38 },
-  { "name": "Martell", "category": "konyak", "volume": 700, "percent": 40 },
-  { "name": "Jägermeister", "category": "likőr", "volume": 700, "percent": 35 },
-  { "name": "Baileys Irish Cream", "category": "likőr", "volume": 700, "percent": 17 },
-  { "name": "Ballantines Whisky", "category": "whisky", "volume": 700, "percent": 40 }
+  {
+    "name": "Amstel",
+    "category": "sör",
+    "volume": 500,
+    "percent": 4.5
+  },
+  {
+    "name": "Arany Ászok",
+    "category": "sör",
+    "volume": 500,
+    "percent": 4.3
+  },
+  {
+    "name": "Borsodi Mester",
+    "category": "sör",
+    "volume": 500,
+    "percent": 5.6
+  },
+  {
+    "name": "Borsodi Világos",
+    "category": "sör",
+    "volume": 500,
+    "percent": 4.5
+  },
+  {
+    "name": "Budweiser Budvar",
+    "category": "sör",
+    "volume": 500,
+    "percent": 5
+  },
+  {
+    "name": "Carlsberg",
+    "category": "sör",
+    "volume": 500,
+    "percent": 5
+  },
+  {
+    "name": "Corona Extra",
+    "category": "sör",
+    "volume": 355,
+    "percent": 4.5
+  },
+  {
+    "name": "Csíki Sör",
+    "category": "sör",
+    "volume": 500,
+    "percent": 6
+  },
+  {
+    "name": "Dreher Bak",
+    "category": "sör",
+    "volume": 500,
+    "percent": 7.3
+  },
+  {
+    "name": "Dreher Classic",
+    "category": "sör",
+    "volume": 500,
+    "percent": 4.5
+  },
+  {
+    "name": "Dreher Gold",
+    "category": "sör",
+    "volume": 500,
+    "percent": 5
+  },
+  {
+    "name": "Dreher Hidegkomlós",
+    "category": "sör",
+    "volume": 500,
+    "percent": 4.5
+  },
+  {
+    "name": "Guinness Draught",
+    "category": "sör",
+    "volume": 440,
+    "percent": 4.2
+  },
+  {
+    "name": "Gösser Märzen",
+    "category": "sör",
+    "volume": 500,
+    "percent": 5.2
+  },
+  {
+    "name": "Heineken",
+    "category": "sör",
+    "volume": 500,
+    "percent": 5
+  },
+  {
+    "name": "Heineken Silver",
+    "category": "sör",
+    "volume": 500,
+    "percent": 4
+  },
+  {
+    "name": "Hoegaarden",
+    "category": "sör",
+    "volume": 330,
+    "percent": 4.9
+  },
+  {
+    "name": "Kozel Dark",
+    "category": "sör",
+    "volume": 500,
+    "percent": 3.8
+  },
+  {
+    "name": "Kozel Premium",
+    "category": "sör",
+    "volume": 500,
+    "percent": 4.6
+  },
+  {
+    "name": "Kőbányai Világos",
+    "category": "sör",
+    "volume": 500,
+    "percent": 4.3
+  },
+  {
+    "name": "Leffe Blonde",
+    "category": "sör",
+    "volume": 330,
+    "percent": 6.6
+  },
+  {
+    "name": "Leffe Brune",
+    "category": "sör",
+    "volume": 330,
+    "percent": 6.5
+  },
+  {
+    "name": "Miller Genuine Draft",
+    "category": "sör",
+    "volume": 330,
+    "percent": 4.7
+  },
+  {
+    "name": "Paulaner Hefe-Weißbier",
+    "category": "sör",
+    "volume": 500,
+    "percent": 5.5
+  },
+  {
+    "name": "Peroni Nastro Azzurro",
+    "category": "sör",
+    "volume": 500,
+    "percent": 5.1
+  },
+  {
+    "name": "Pilsner Urquell",
+    "category": "sör",
+    "volume": 500,
+    "percent": 4.4
+  },
+  {
+    "name": "Pécsi Meggy Ale",
+    "category": "sör",
+    "volume": 330,
+    "percent": 4.5
+  },
+  {
+    "name": "Pécsi Prémium Lager",
+    "category": "sör",
+    "volume": 500,
+    "percent": 5
+  },
+  {
+    "name": "Pécsi Szalon",
+    "category": "sör",
+    "volume": 500,
+    "percent": 4.6
+  },
+  {
+    "name": "Soproni Démon",
+    "category": "sör",
+    "volume": 500,
+    "percent": 5.2
+  },
+  {
+    "name": "Soproni IPA",
+    "category": "sör",
+    "volume": 500,
+    "percent": 5.2
+  },
+  {
+    "name": "Soproni Klasszikus",
+    "category": "sör",
+    "volume": 500,
+    "percent": 4.5
+  },
+  {
+    "name": "Soproni Meggy",
+    "category": "sör",
+    "volume": 500,
+    "percent": 4
+  },
+  {
+    "name": "Soproni Óvatos Duhaj APA",
+    "category": "sör",
+    "volume": 500,
+    "percent": 5
+  },
+  {
+    "name": "Soproni Óvatos Duhaj IPA",
+    "category": "sör",
+    "volume": 500,
+    "percent": 4.8
+  },
+  {
+    "name": "Soproni Óvatos Duhaj Meggy Ale",
+    "category": "sör",
+    "volume": 500,
+    "percent": 4
+  },
+  {
+    "name": "Staropramen Dark",
+    "category": "sör",
+    "volume": 500,
+    "percent": 4.4
+  },
+  {
+    "name": "Staropramen Premium",
+    "category": "sör",
+    "volume": 500,
+    "percent": 5
+  },
+  {
+    "name": "Stella Artois",
+    "category": "sör",
+    "volume": 500,
+    "percent": 5
+  },
+  {
+    "name": "Tiltott Csíki Sör",
+    "category": "sör",
+    "volume": 500,
+    "percent": 6
+  },
+  {
+    "name": "Tuborg Green",
+    "category": "sör",
+    "volume": 500,
+    "percent": 4.6
+  },
+  {
+    "name": "Desperados Tequila Flavoured Beer",
+    "category": "ízesített sör",
+    "volume": 500,
+    "percent": 5.9
+  },
+  {
+    "name": "Mort Subite Kriek",
+    "category": "gyümölcsös sör",
+    "volume": 250,
+    "percent": 4
+  },
+  {
+    "name": "Borsodi Friss Citrom",
+    "category": "radler",
+    "volume": 500,
+    "percent": 1.5
+  },
+  {
+    "name": "Borsodi Friss Grapefruit",
+    "category": "radler",
+    "volume": 500,
+    "percent": 1.5
+  },
+  {
+    "name": "Gösser Natur Zitrone",
+    "category": "radler",
+    "volume": 500,
+    "percent": 2
+  },
+  {
+    "name": "Somersby Apple",
+    "category": "cider",
+    "volume": 500,
+    "percent": 4.5
+  },
+  {
+    "name": "Somersby Blackberry",
+    "category": "cider",
+    "volume": 500,
+    "percent": 4.5
+  },
+  {
+    "name": "Somersby Mango & Lime",
+    "category": "cider",
+    "volume": 500,
+    "percent": 4.5
+  },
+  {
+    "name": "Somersby Pear",
+    "category": "cider",
+    "volume": 500,
+    "percent": 4.5
+  },
+  {
+    "name": "Sommersby Cider",
+    "category": "cider",
+    "volume": 500,
+    "percent": 4.5
+  },
+  {
+    "name": "Strongbow Elderflower",
+    "category": "cider",
+    "volume": 500,
+    "percent": 4
+  },
+  {
+    "name": "Strongbow Gold Apple",
+    "category": "cider",
+    "volume": 500,
+    "percent": 4.5
+  },
+  {
+    "name": "Strongbow Red Berries",
+    "category": "cider",
+    "volume": 500,
+    "percent": 4
+  },
+  {
+    "name": "Viper Hard Seltzer Cranberry",
+    "category": "hard seltzer",
+    "volume": 330,
+    "percent": 4
+  },
+  {
+    "name": "Viper Hard Seltzer Lime",
+    "category": "hard seltzer",
+    "volume": 330,
+    "percent": 4
+  },
+  {
+    "name": "White Claw Black Cherry",
+    "category": "hard seltzer",
+    "volume": 330,
+    "percent": 4.5
+  },
+  {
+    "name": "White Claw Mango",
+    "category": "hard seltzer",
+    "volume": 330,
+    "percent": 4.5
+  },
+  {
+    "name": "Bacardi Breezer Lime",
+    "category": "RTD koktél",
+    "volume": 275,
+    "percent": 4
+  },
+  {
+    "name": "Bacardi Breezer Orange",
+    "category": "RTD koktél",
+    "volume": 275,
+    "percent": 4
+  },
+  {
+    "name": "Bacardi Breezer Pineapple",
+    "category": "RTD koktél",
+    "volume": 275,
+    "percent": 4
+  },
+  {
+    "name": "Bacardi Breezer Watermelon",
+    "category": "RTD koktél",
+    "volume": 275,
+    "percent": 4
+  },
+  {
+    "name": "Bacardi Cuba Libre Can",
+    "category": "RTD koktél",
+    "volume": 250,
+    "percent": 5
+  },
+  {
+    "name": "Bacardi Mojito Can",
+    "category": "RTD koktél",
+    "volume": 250,
+    "percent": 5
+  },
+  {
+    "name": "Bombay Sapphire Gin & Tonic Can",
+    "category": "RTD koktél",
+    "volume": 250,
+    "percent": 6.5
+  },
+  {
+    "name": "Captain Morgan Spiced Gold & Cola Can",
+    "category": "RTD koktél",
+    "volume": 250,
+    "percent": 5
+  },
+  {
+    "name": "Cosmopolitan Ready To Drink",
+    "category": "RTD koktél",
+    "volume": 700,
+    "percent": 12
+  },
+  {
+    "name": "Garage Hard Lemon",
+    "category": "RTD koktél",
+    "volume": 400,
+    "percent": 4.5
+  },
+  {
+    "name": "Garage Hard Lime",
+    "category": "RTD koktél",
+    "volume": 400,
+    "percent": 4.5
+  },
+  {
+    "name": "Garage Hard Orange",
+    "category": "RTD koktél",
+    "volume": 400,
+    "percent": 4.5
+  },
+  {
+    "name": "Gordon's Gin & Tonic Can",
+    "category": "RTD koktél",
+    "volume": 250,
+    "percent": 5
+  },
+  {
+    "name": "Gordon's Pink Gin & Tonic Can",
+    "category": "RTD koktél",
+    "volume": 250,
+    "percent": 5
+  },
+  {
+    "name": "Jack Daniel's & Cola Can",
+    "category": "RTD koktél",
+    "volume": 330,
+    "percent": 5
+  },
+  {
+    "name": "Jim Beam & Cola Can",
+    "category": "RTD koktél",
+    "volume": 330,
+    "percent": 4.5
+  },
+  {
+    "name": "Margarita Ready To Drink",
+    "category": "RTD koktél",
+    "volume": 700,
+    "percent": 12
+  },
+  {
+    "name": "Mojito Ready To Drink",
+    "category": "RTD koktél",
+    "volume": 700,
+    "percent": 14.9
+  },
+  {
+    "name": "Pina Colada Ready To Drink",
+    "category": "RTD koktél",
+    "volume": 700,
+    "percent": 14.9
+  },
+  {
+    "name": "Smirnoff Ice",
+    "category": "RTD koktél",
+    "volume": 275,
+    "percent": 4
+  },
+  {
+    "name": "Smirnoff Ice Red",
+    "category": "RTD koktél",
+    "volume": 275,
+    "percent": 4
+  },
+  {
+    "name": "Tequila Sunrise Ready To Drink",
+    "category": "RTD koktél",
+    "volume": 700,
+    "percent": 12
+  },
+  {
+    "name": "Absolut Vodka",
+    "category": "vodka",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Belvedere Vodka",
+    "category": "vodka",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Finlandia Vodka",
+    "category": "vodka",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Grey Goose",
+    "category": "vodka",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Kalinka Vodka",
+    "category": "vodka",
+    "volume": 700,
+    "percent": 37.5
+  },
+  {
+    "name": "Nemiroff Original",
+    "category": "vodka",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Russian Standard",
+    "category": "vodka",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Smirnoff Red",
+    "category": "vodka",
+    "volume": 700,
+    "percent": 37.5
+  },
+  {
+    "name": "Stolichnaya",
+    "category": "vodka",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Absolut Citron",
+    "category": "ízesített vodka",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Absolut Raspberri",
+    "category": "ízesített vodka",
+    "volume": 700,
+    "percent": 38
+  },
+  {
+    "name": "Absolut Vanilia",
+    "category": "ízesített vodka",
+    "volume": 700,
+    "percent": 38
+  },
+  {
+    "name": "Absolut Watermelon",
+    "category": "ízesített vodka",
+    "volume": 700,
+    "percent": 38
+  },
+  {
+    "name": "Finlandia Cranberry",
+    "category": "ízesített vodka",
+    "volume": 700,
+    "percent": 37.5
+  },
+  {
+    "name": "Finlandia Lime",
+    "category": "ízesített vodka",
+    "volume": 700,
+    "percent": 37.5
+  },
+  {
+    "name": "Smirnoff Green Apple",
+    "category": "ízesített vodka",
+    "volume": 700,
+    "percent": 37.5
+  },
+  {
+    "name": "Smirnoff Raspberry",
+    "category": "ízesített vodka",
+    "volume": 700,
+    "percent": 37.5
+  },
+  {
+    "name": "Ballantines Whisky",
+    "category": "whisky",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Chivas Regal 12",
+    "category": "whisky",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Grant's Triple Wood",
+    "category": "whisky",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "J&B Rare",
+    "category": "whisky",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Johnnie Walker Black Label",
+    "category": "whisky",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Johnnie Walker Red Label",
+    "category": "whisky",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Teacher's Highland Cream",
+    "category": "whisky",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "The Famous Grouse",
+    "category": "whisky",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Bushmills Original",
+    "category": "whiskey",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Jack Daniel's Old No. 7",
+    "category": "whiskey",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Jameson Caskmates Stout Edition",
+    "category": "whiskey",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Jameson Irish Whiskey",
+    "category": "whiskey",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Tullamore D.E.W.",
+    "category": "whiskey",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Jim Beam White",
+    "category": "bourbon whiskey",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Maker's Mark",
+    "category": "bourbon whiskey",
+    "volume": 700,
+    "percent": 45
+  },
+  {
+    "name": "Glenfiddich 12",
+    "category": "single malt whisky",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Glenlivet 12",
+    "category": "single malt whisky",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Fireball Cinnamon Whisky",
+    "category": "ízesített whiskey",
+    "volume": 700,
+    "percent": 33
+  },
+  {
+    "name": "Jack Daniel's Apple",
+    "category": "ízesített whiskey",
+    "volume": 700,
+    "percent": 35
+  },
+  {
+    "name": "Jack Daniel's Tennessee Fire",
+    "category": "ízesített whiskey",
+    "volume": 700,
+    "percent": 35
+  },
+  {
+    "name": "Jack Daniel's Tennessee Honey",
+    "category": "ízesített whiskey",
+    "volume": 700,
+    "percent": 35
+  },
+  {
+    "name": "Jim Beam Apple",
+    "category": "ízesített whiskey",
+    "volume": 700,
+    "percent": 35
+  },
+  {
+    "name": "Jim Beam Honey",
+    "category": "ízesített whiskey",
+    "volume": 700,
+    "percent": 35
+  },
+  {
+    "name": "Bacardi Carta Blanca",
+    "category": "rum",
+    "volume": 700,
+    "percent": 37.5
+  },
+  {
+    "name": "Bacardi Carta Negra",
+    "category": "rum",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Bacardi Spiced",
+    "category": "rum",
+    "volume": 700,
+    "percent": 35
+  },
+  {
+    "name": "Captain Morgan Black Spiced",
+    "category": "rum",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Captain Morgan Spiced Gold",
+    "category": "rum",
+    "volume": 700,
+    "percent": 35
+  },
+  {
+    "name": "Captain Morgan White",
+    "category": "rum",
+    "volume": 700,
+    "percent": 37.5
+  },
+  {
+    "name": "Diplomático Reserva Exclusiva",
+    "category": "rum",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Don Papa Rum",
+    "category": "rum",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Havana Club 3 Años",
+    "category": "rum",
+    "volume": 700,
+    "percent": 37.5
+  },
+  {
+    "name": "Havana Club 7 Años",
+    "category": "rum",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Havana Club Especial",
+    "category": "rum",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Kraken Black Spiced Rum",
+    "category": "rum",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Plantation Original Dark",
+    "category": "rum",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Beefeater London Dry",
+    "category": "gin",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Bobby's Schiedam Dry Gin",
+    "category": "gin",
+    "volume": 700,
+    "percent": 42
+  },
+  {
+    "name": "Bombay Sapphire",
+    "category": "gin",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Gordon's London Dry",
+    "category": "gin",
+    "volume": 700,
+    "percent": 37.5
+  },
+  {
+    "name": "Hendrick's Gin",
+    "category": "gin",
+    "volume": 700,
+    "percent": 41.4
+  },
+  {
+    "name": "Roku Gin",
+    "category": "gin",
+    "volume": 700,
+    "percent": 43
+  },
+  {
+    "name": "Tanqueray",
+    "category": "gin",
+    "volume": 700,
+    "percent": 43.1
+  },
+  {
+    "name": "Beefeater Pink Strawberry",
+    "category": "ízesített gin",
+    "volume": 700,
+    "percent": 37.5
+  },
+  {
+    "name": "Gordon's Premium Pink",
+    "category": "ízesített gin",
+    "volume": 700,
+    "percent": 37.5
+  },
+  {
+    "name": "Gordon's Sicilian Lemon",
+    "category": "ízesített gin",
+    "volume": 700,
+    "percent": 37.5
+  },
+  {
+    "name": "Tanqueray Sevilla",
+    "category": "ízesített gin",
+    "volume": 700,
+    "percent": 41.3
+  },
+  {
+    "name": "Don Julio Blanco",
+    "category": "tequila",
+    "volume": 700,
+    "percent": 38
+  },
+  {
+    "name": "Jose Cuervo Especial Gold",
+    "category": "tequila",
+    "volume": 700,
+    "percent": 38
+  },
+  {
+    "name": "Jose Cuervo Especial Silver",
+    "category": "tequila",
+    "volume": 700,
+    "percent": 38
+  },
+  {
+    "name": "Olmeca Blanco",
+    "category": "tequila",
+    "volume": 700,
+    "percent": 38
+  },
+  {
+    "name": "Olmeca Reposado",
+    "category": "tequila",
+    "volume": 700,
+    "percent": 38
+  },
+  {
+    "name": "Sierra Tequila Blanco (átlátszó)",
+    "category": "tequila",
+    "volume": 700,
+    "percent": 38
+  },
+  {
+    "name": "Sierra Tequila Reposado (sárga)",
+    "category": "tequila",
+    "volume": 700,
+    "percent": 38
+  },
+  {
+    "name": "Sierra Café",
+    "category": "tequila likőr",
+    "volume": 700,
+    "percent": 25
+  },
+  {
+    "name": "Metaxa 5*",
+    "category": "brandy",
+    "volume": 700,
+    "percent": 38
+  },
+  {
+    "name": "Metaxa 7*",
+    "category": "brandy",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "St. Rémy VSOP",
+    "category": "brandy",
+    "volume": 700,
+    "percent": 36
+  },
+  {
+    "name": "Courvoisier VS",
+    "category": "konyak",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Hennessy VS",
+    "category": "konyak",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Martell",
+    "category": "konyak",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Rémy Martin VSOP",
+    "category": "konyak",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Baileys Irish Cream",
+    "category": "likőr",
+    "volume": 700,
+    "percent": 17
+  },
+  {
+    "name": "Disaronno Amaretto",
+    "category": "likőr",
+    "volume": 700,
+    "percent": 28
+  },
+  {
+    "name": "Fütyülős Eper",
+    "category": "likőr",
+    "volume": 500,
+    "percent": 30
+  },
+  {
+    "name": "Fütyülős Feketecseresznye",
+    "category": "likőr",
+    "volume": 500,
+    "percent": 30
+  },
+  {
+    "name": "Fütyülős Karamell",
+    "category": "likőr",
+    "volume": 500,
+    "percent": 30
+  },
+  {
+    "name": "Fütyülős Mézes Barack",
+    "category": "likőr",
+    "volume": 500,
+    "percent": 30
+  },
+  {
+    "name": "Fütyülős Mézes Meggy",
+    "category": "likőr",
+    "volume": 500,
+    "percent": 30
+  },
+  {
+    "name": "Fütyülős Mézes Áfonya",
+    "category": "likőr",
+    "volume": 500,
+    "percent": 30
+  },
+  {
+    "name": "Jägermeister",
+    "category": "likőr",
+    "volume": 700,
+    "percent": 35
+  },
+  {
+    "name": "Licor 43",
+    "category": "likőr",
+    "volume": 700,
+    "percent": 31
+  },
+  {
+    "name": "Limoncello",
+    "category": "likőr",
+    "volume": 500,
+    "percent": 30
+  },
+  {
+    "name": "Malibu",
+    "category": "likőr",
+    "volume": 700,
+    "percent": 21
+  },
+  {
+    "name": "Royal Meggy",
+    "category": "likőr",
+    "volume": 200,
+    "percent": 28
+  },
+  {
+    "name": "Royal Málna",
+    "category": "likőr",
+    "volume": 500,
+    "percent": 26
+  },
+  {
+    "name": "Sambuca Molinari",
+    "category": "likőr",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Southern Comfort",
+    "category": "likőr",
+    "volume": 700,
+    "percent": 35
+  },
+  {
+    "name": "Jägermeister Cold Brew Coffee",
+    "category": "ízesített likőr",
+    "volume": 700,
+    "percent": 33
+  },
+  {
+    "name": "Jägermeister Orange",
+    "category": "ízesített likőr",
+    "volume": 700,
+    "percent": 33
+  },
+  {
+    "name": "Baileys Chocolate Luxe",
+    "category": "krémlikőr",
+    "volume": 500,
+    "percent": 15.7
+  },
+  {
+    "name": "Baileys Salted Caramel",
+    "category": "krémlikőr",
+    "volume": 700,
+    "percent": 17
+  },
+  {
+    "name": "Batida de Coco",
+    "category": "krémlikőr",
+    "volume": 700,
+    "percent": 16
+  },
+  {
+    "name": "Sheridan's",
+    "category": "krémlikőr",
+    "volume": 500,
+    "percent": 15.5
+  },
+  {
+    "name": "Kahlúa",
+    "category": "kávélikőr",
+    "volume": 700,
+    "percent": 20
+  },
+  {
+    "name": "Archers Peach Schnapps",
+    "category": "gyümölcslikőr",
+    "volume": 700,
+    "percent": 18
+  },
+  {
+    "name": "Passoa Passion Fruit",
+    "category": "gyümölcslikőr",
+    "volume": 700,
+    "percent": 17
+  },
+  {
+    "name": "Pisang Ambon",
+    "category": "gyümölcslikőr",
+    "volume": 700,
+    "percent": 17
+  },
+  {
+    "name": "XUXU Strawberry Vodka Liqueur",
+    "category": "gyümölcslikőr",
+    "volume": 700,
+    "percent": 15
+  },
+  {
+    "name": "Bols Banana",
+    "category": "koktéllikőr",
+    "volume": 700,
+    "percent": 17
+  },
+  {
+    "name": "Bols Blue Curaçao",
+    "category": "koktéllikőr",
+    "volume": 700,
+    "percent": 21
+  },
+  {
+    "name": "Bols Coconut",
+    "category": "koktéllikőr",
+    "volume": 700,
+    "percent": 17
+  },
+  {
+    "name": "Bols Melon",
+    "category": "koktéllikőr",
+    "volume": 700,
+    "percent": 17
+  },
+  {
+    "name": "Bols Peach",
+    "category": "koktéllikőr",
+    "volume": 700,
+    "percent": 17
+  },
+  {
+    "name": "Bols Strawberry",
+    "category": "koktéllikőr",
+    "volume": 700,
+    "percent": 17
+  },
+  {
+    "name": "De Kuyper Blue Curaçao",
+    "category": "koktéllikőr",
+    "volume": 700,
+    "percent": 20
+  },
+  {
+    "name": "De Kuyper Sour Rhubarb",
+    "category": "koktéllikőr",
+    "volume": 700,
+    "percent": 15
+  },
+  {
+    "name": "De Kuyper Triple Sec",
+    "category": "koktéllikőr",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Pina Colada Cream Liqueur",
+    "category": "koktél likőr",
+    "volume": 700,
+    "percent": 15
+  },
+  {
+    "name": "Cointreau",
+    "category": "narancslikőr",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Grand Marnier Cordon Rouge",
+    "category": "narancslikőr",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Aperol",
+    "category": "aperitif",
+    "volume": 700,
+    "percent": 11
+  },
+  {
+    "name": "Campari",
+    "category": "aperitif",
+    "volume": 700,
+    "percent": 25
+  },
+  {
+    "name": "Jägermeister Manifest",
+    "category": "keserűlikőr",
+    "volume": 1000,
+    "percent": 38
+  },
+  {
+    "name": "Unicum",
+    "category": "keserűlikőr",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Unicum Barista",
+    "category": "keserűlikőr",
+    "volume": 700,
+    "percent": 34.5
+  },
+  {
+    "name": "Unicum Riserva",
+    "category": "keserűlikőr",
+    "volume": 700,
+    "percent": 40
+  },
+  {
+    "name": "Unicum Szilva",
+    "category": "keserűlikőr",
+    "volume": 700,
+    "percent": 34.5
+  },
+  {
+    "name": "Becherovka Original",
+    "category": "gyógynövénylikőr",
+    "volume": 700,
+    "percent": 38
+  },
+  {
+    "name": "St. Hubertus",
+    "category": "gyógynövénylikőr",
+    "volume": 700,
+    "percent": 33
+  },
+  {
+    "name": "Berentzen Apple",
+    "category": "shot likőr",
+    "volume": 700,
+    "percent": 18
+  },
+  {
+    "name": "Berentzen Sour Apple",
+    "category": "shot likőr",
+    "volume": 700,
+    "percent": 16
+  },
+  {
+    "name": "Berentzen Wild Cherry",
+    "category": "shot likőr",
+    "volume": 700,
+    "percent": 16
+  },
+  {
+    "name": "Koskenkorva Salmiakki",
+    "category": "shot likőr",
+    "volume": 500,
+    "percent": 30
+  },
+  {
+    "name": "Koskenkorva Vodka Lemon Shot",
+    "category": "shot likőr",
+    "volume": 500,
+    "percent": 21
+  },
+  {
+    "name": "Barack Pálinka",
+    "category": "pálinka",
+    "volume": 500,
+    "percent": 40
+  },
+  {
+    "name": "Birs Pálinka",
+    "category": "pálinka",
+    "volume": 500,
+    "percent": 40
+  },
+  {
+    "name": "Cseresznye Pálinka",
+    "category": "pálinka",
+    "volume": 500,
+    "percent": 40
+  },
+  {
+    "name": "Panyolai Elixír Kajszibarack",
+    "category": "pálinka",
+    "volume": 500,
+    "percent": 40
+  },
+  {
+    "name": "Panyolai Elixír Szatmári Szilva",
+    "category": "pálinka",
+    "volume": 500,
+    "percent": 40
+  },
+  {
+    "name": "Rézangyal Barack Pálinka",
+    "category": "pálinka",
+    "volume": 500,
+    "percent": 40
+  },
+  {
+    "name": "Rézangyal Mézes Ágyas Meggy",
+    "category": "pálinka",
+    "volume": 500,
+    "percent": 35
+  },
+  {
+    "name": "Rézangyal Szilva Pálinka",
+    "category": "pálinka",
+    "volume": 500,
+    "percent": 40
+  },
+  {
+    "name": "Szilva Pálinka",
+    "category": "pálinka",
+    "volume": 500,
+    "percent": 40
+  },
+  {
+    "name": "Vilmos Körte Pálinka",
+    "category": "pálinka",
+    "volume": 500,
+    "percent": 40
+  },
+  {
+    "name": "Zwack Nemes Pálinka Barack",
+    "category": "pálinka",
+    "volume": 500,
+    "percent": 40
+  },
+  {
+    "name": "Ágyas Szilva Pálinka",
+    "category": "pálinka",
+    "volume": 500,
+    "percent": 40
+  },
+  {
+    "name": "Chardonnay",
+    "category": "fehérbor",
+    "volume": 750,
+    "percent": 13
+  },
+  {
+    "name": "Hárslevelű",
+    "category": "fehérbor",
+    "volume": 750,
+    "percent": 12
+  },
+  {
+    "name": "Irsai Olivér",
+    "category": "fehérbor",
+    "volume": 750,
+    "percent": 11.5
+  },
+  {
+    "name": "Muscat Ottonel",
+    "category": "fehérbor",
+    "volume": 750,
+    "percent": 11.5
+  },
+  {
+    "name": "Olaszrizling",
+    "category": "fehérbor",
+    "volume": 750,
+    "percent": 12
+  },
+  {
+    "name": "Rajnai Rizling",
+    "category": "fehérbor",
+    "volume": 750,
+    "percent": 12.5
+  },
+  {
+    "name": "Sauvignon Blanc",
+    "category": "fehérbor",
+    "volume": 750,
+    "percent": 12.5
+  },
+  {
+    "name": "Tokaji Furmint",
+    "category": "fehérbor",
+    "volume": 750,
+    "percent": 12.5
+  },
+  {
+    "name": "Cabernet Franc",
+    "category": "vörösbor",
+    "volume": 750,
+    "percent": 13.5
+  },
+  {
+    "name": "Egri Bikavér",
+    "category": "vörösbor",
+    "volume": 750,
+    "percent": 13
+  },
+  {
+    "name": "Kékfrankos",
+    "category": "vörösbor",
+    "volume": 750,
+    "percent": 13
+  },
+  {
+    "name": "Pinot Noir",
+    "category": "vörösbor",
+    "volume": 750,
+    "percent": 13
+  },
+  {
+    "name": "Szekszárdi Kadarka",
+    "category": "vörösbor",
+    "volume": 750,
+    "percent": 12.5
+  },
+  {
+    "name": "Villányi Cabernet Sauvignon",
+    "category": "vörösbor",
+    "volume": 750,
+    "percent": 13.5
+  },
+  {
+    "name": "Villányi Merlot",
+    "category": "vörösbor",
+    "volume": 750,
+    "percent": 13
+  },
+  {
+    "name": "Villányi Portugieser",
+    "category": "vörösbor",
+    "volume": 750,
+    "percent": 12.5
+  },
+  {
+    "name": "Kékfrankos Rosé",
+    "category": "rozébor",
+    "volume": 750,
+    "percent": 12
+  },
+  {
+    "name": "Rosé Cuvée",
+    "category": "rozébor",
+    "volume": 750,
+    "percent": 12
+  },
+  {
+    "name": "Tokaji Aszú 5 Puttonyos",
+    "category": "desszertbor",
+    "volume": 500,
+    "percent": 11.5
+  },
+  {
+    "name": "Tokaji Szamorodni",
+    "category": "desszertbor",
+    "volume": 500,
+    "percent": 13
+  },
+  {
+    "name": "Asti Martini",
+    "category": "pezsgő",
+    "volume": 750,
+    "percent": 7.5
+  },
+  {
+    "name": "Freixenet Cordon Negro Brut",
+    "category": "pezsgő",
+    "volume": 750,
+    "percent": 11.5
+  },
+  {
+    "name": "Hungaria Extra Dry",
+    "category": "pezsgő",
+    "volume": 750,
+    "percent": 12
+  },
+  {
+    "name": "Hungaria Grande Cuvée Brut",
+    "category": "pezsgő",
+    "volume": 750,
+    "percent": 12
+  },
+  {
+    "name": "Prosecco Spumante",
+    "category": "pezsgő",
+    "volume": 750,
+    "percent": 11
+  },
+  {
+    "name": "Törley Charmant Doux",
+    "category": "pezsgő",
+    "volume": 750,
+    "percent": 11.5
+  },
+  {
+    "name": "Törley Fortuna",
+    "category": "pezsgő",
+    "volume": 750,
+    "percent": 7.5
+  },
+  {
+    "name": "Törley Gála Sec",
+    "category": "pezsgő",
+    "volume": 750,
+    "percent": 11.5
+  },
+  {
+    "name": "Cinzano Bianco",
+    "category": "vermouth",
+    "volume": 1000,
+    "percent": 15
+  },
+  {
+    "name": "Cinzano Rosso",
+    "category": "vermouth",
+    "volume": 1000,
+    "percent": 14.4
+  },
+  {
+    "name": "Martini Bianco",
+    "category": "vermouth",
+    "volume": 1000,
+    "percent": 15
+  },
+  {
+    "name": "Martini Extra Dry",
+    "category": "vermouth",
+    "volume": 1000,
+    "percent": 15
+  },
+  {
+    "name": "Martini Rosso",
+    "category": "vermouth",
+    "volume": 1000,
+    "percent": 15
+  },
+  {
+    "name": "Royal Original",
+    "category": "rövidital",
+    "volume": 500,
+    "percent": 37.5
+  }
 ]
